@@ -12,5 +12,6 @@ const appStore=configureStore({
         request:requestReducer,
         connections:connectionsReducer
     },
+    devTools:import.meta.env.MODE !== "production",
 })
 export default appStore

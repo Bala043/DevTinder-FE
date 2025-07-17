@@ -8,7 +8,8 @@ import { BASE_URL } from "../utils/constants";
 const Chat = () => {
   const user = useSelector((store) => store.user);
   const userId = user?._id;
-  const { id } = useParams(); // target user ID
+  const { id } = useParams();
+  const[error,setError]=useState("") // target user ID
 
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -35,7 +36,8 @@ const Chat = () => {
 
         setMessages(res2?.data?.messages || []);
       } catch (err) {
-        console.error("Fetch error:", err);
+
+        setError(err?.message)
       }
     };
 
