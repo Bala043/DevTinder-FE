@@ -1,1 +1,1 @@
-export const BASE_URL=location.hostname==="localhost"?"http://localhost:3000":"/api";
+export const BASE_URL=location.hostname==="localhost"?"http://localhost:3000":"http://34.201.77.122:3000"
