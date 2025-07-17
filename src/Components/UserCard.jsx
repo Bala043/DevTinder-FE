@@ -11,9 +11,9 @@ const UserCard = ({user,show}) => {
   
   const dispatch=useDispatch()
   const handleReview=async(status,_id)=>{
-    console.log(_id)
+    
     const res=await axios.post(BASE_URL+"/request/send/"+status+"/"+_id,{},{withCredentials:true})
-    console.log(res.data)
+   
     dispatch(removeFeed(user._id))
    
 
