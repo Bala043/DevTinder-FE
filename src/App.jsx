@@ -8,9 +8,9 @@ import Feed from "./Components/Feed"
 import Body from "./Components/Body"
 import Connections from "./Components/Connections"
 import Requests from "./Components/Requests"
+import Premium from "./Components/Premium"
+import Chat from "./Components/Chat"
 function App() {
-
-
   return (
    <>
    <Provider store={appStore}>
@@ -22,8 +22,9 @@ function App() {
     <Route path="/profile" element={<Profile/>}></Route>
     <Route path="/connections" element={<Connections/>}></Route>
     <Route path="/requests" element={<Requests/>}></Route>
+    <Route path="/premium" element={<Premium/>}></Route>
+    <Route path="chat/:id" element={<Chat/>}></Route>
     </Route>
-    
   </Routes>
   </BrowserRouter>
   </Provider>

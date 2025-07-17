@@ -7,7 +7,7 @@ import { BASE_URL } from '../utils/constants'
 const UserCard = ({user,show}) => {
   
 
-  
+
   
   const dispatch=useDispatch()
   const handleReview=async(status,_id)=>{
@@ -21,9 +21,9 @@ const UserCard = ({user,show}) => {
   
  
   return  (
-    <div className="card bg-base-300 w-96 shadow-sm">
+    <div className="card mt-0 bg-base-300 w-96 shadow-sm">
   <figure>
-    <img
+    <img className="w-[400px] h-[400px]"
       src={user.profilePhoto||null}
       alt="profile"/>
   </figure>

@@ -6,9 +6,13 @@ const requestSlice=createSlice({
         addRequest:(state,action)=>{
             return action.payload;
         },
+        removeRequests:()=>{
+            return null
+
+        }
         
     }
 })
 
-export const{addRequest,removeRequest}=requestSlice.actions;
+export const{addRequest,removeRequests}=requestSlice.actions;
 export default requestSlice.reducer;
